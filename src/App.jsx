@@ -1,9 +1,10 @@
-import UnPay from './components/StudentUnPay/UnPay'
+import { useState } from 'react'
+
 function App() {
 
   return (
     <div className="App">
-      <UnPay/>
+      <h1>Hello world!</h1>
     </div>
   )
 }

@@ -1,0 +1,7 @@
+:where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-inline-collapsed >.ant-menu-item, :where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item, :where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-inline-collapsed >.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title, :where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-inline-collapsed >.ant-menu-submenu>.ant-menu-submenu-title{
+  padding-inline: calc(50% - 17px);
+}
+
+:where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-inline >.ant-menu-item, :where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-vertical >.ant-menu-item, :where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-inline >.ant-menu-submenu>.ant-menu-submenu-title, :where(.css-dev-only-do-not-override-1mqg3i0).ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title{
+  height: 50px;
+}

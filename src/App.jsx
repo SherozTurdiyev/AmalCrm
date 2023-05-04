@@ -1,11 +1,14 @@
 import { useState } from 'react'
+import Statistics from './components/Statistics'
+import Apbar from './components/Apbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <h1>Hello world!</h1>
+      {/* <Statistics/> */}
+      <Apbar/>
     </div>
   )
 }

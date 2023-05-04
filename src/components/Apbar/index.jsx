@@ -16,13 +16,7 @@ import { TbHexagonLetterA } from 'react-icons/tb'
 import { Menu } from 'antd';
 
 function App() {
-  const [collapsed, setCollapsed] = useState(true);
-
-  function toggleCollapsed(e) {
-    if (e.key === 'crm') {
-      setCollapsed(!collapsed);
-    }
-  };
+ 
 
   return (
     <div style={{ width: 256 }}>
@@ -30,8 +24,7 @@ function App() {
         mode="inline"
         theme='dark'
         style={{ background: "#4D44B5", fontWeight: '500', height: '100vh', fontSize: '17px'}}
-        inlineCollapsed={collapsed}
-        onClick={toggleCollapsed}
+        
         items={[
           // {label : `${collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}`},
           { label: "CRM", key: 'crm', icon: <TbHexagonLetterA style={{ fontSize: "30px", background: '#FB7D5B', padding: '3px', boxSizing: 'border-box' }} className='rounded-lg' /> },

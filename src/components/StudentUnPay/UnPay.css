@@ -1,0 +1,7 @@
+.dropdown-toggle::after{
+    display: none !important;
+}
+.p{
+    padding: 0;
+    margin: 0;
+}

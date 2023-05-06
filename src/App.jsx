@@ -1,17 +1,20 @@
 import { useState } from 'react'
-import About_Student from './components/About_Student/About_Student'
-import Add_student from './components/Add_student/Add_student'
-import LessonCard from './components/LessonCard/LessonCard'
-import Navbar from './components/Navbar/Navbar'
+import Apbar from './components/Apbar/index.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
+import Add_student from './components/Add_student/Add_student.jsx'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      {/* <About_Student/> */}
-      {/* <LessonCard/> */}
-      {/* <Add_student/> */}
-      <Navbar/>
+    <div className="">
+      <div className='row gx-0'>
+        <div className='col-2'>
+          <Apbar/>
+        </div>
+        <div className='col-10 px-4'>
+        <Navbar/>
+        <Add_student/>
+        </div>
+      </div>
     </div>
   )
 }

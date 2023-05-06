@@ -1,10 +1,11 @@
 import React from 'react'
+import {IoMdNotificationsOutline} from 'react-icons/io'
 import './Navbar.css'
 
 export default function Navbar() {
   return (
     <div className=''>
-      <div className='d-flex w-100 justify-content-between px-3 navbar'>
+      <div className='d-flex w-100 justify-content-between navbar'>
         <h1 className='nav_title'>
           Dashboard
         </h1>
@@ -16,7 +17,7 @@ export default function Navbar() {
           </select>
 
           <div className='not_icon'>
-            <i class="bi bi-bell"></i>
+            <IoMdNotificationsOutline/>
           </div>
           
           <div className='user_info_nav'>

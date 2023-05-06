@@ -1,10 +1,9 @@
-import Appbar from './components/Apbar'
-
+import Regist from './components/Button/Button'
 function App() {
 
   return (
     <div className="App">
-      <Appbar/>
+      <Regist/>
     </div>
   )
 }

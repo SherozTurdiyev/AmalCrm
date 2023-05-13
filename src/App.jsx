@@ -2,17 +2,18 @@ import { useState } from 'react'
 import Apbar from './components/Apbar/index.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Add_student from './components/Add_student/Add_student.jsx'
+import Teach_attendance from './components/Teach_attendance/Teach_attendance.jsx'
 function App() {
 
   return (
     <div className="">
       <div className='row gx-0'>
         <div className='col-2'>
-          <Apbar/>
+          <Apbar />
         </div>
         <div className='col-10 px-4'>
-        <Navbar/>
-        <Add_student/>
+          <Navbar />
+          <Teach_attendance/>
         </div>
       </div>
     </div>

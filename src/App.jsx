@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Apbar from './components/Apbar/index.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Add_student from './components/Add_student/Add_student.jsx'
-import Teach_attendance from './components/Teach_attendance/Teach_attendance.jsx'
+import Student_his from './components/Student_history/Student_his.jsx'
 function App() {
 
   return (
@@ -13,7 +13,7 @@ function App() {
         </div>
         <div className='col-10 px-4'>
           <Navbar />
-          <Teach_attendance/>
+          <Student_his/>
         </div>
       </div>
     </div>

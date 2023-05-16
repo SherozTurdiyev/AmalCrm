@@ -1,11 +1,20 @@
 import { useState } from 'react'
-
+import Apbar from './components/Apbar/index.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
+import Schart from './components/StudentChart/Schart.jsx'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <h1>Hello world!</h1>
+    <div className="">
+      <div className='row gx-0'>
+        <div className='col-2'>
+          <Apbar />
+        </div>
+        <div className='col-10 px-4'>
+        <Navbar/>
+        <Schart/>
+        </div>
+      </div>
     </div>
   )
 }

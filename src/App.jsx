@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import Apbar from './components/Apbar/index.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
-import Add_student from './components/Add_student/Add_student.jsx'
-import Student_his from './components/Student_history/Student_his.jsx'
+import Schart from './components/StudentChart/Schart.jsx'
 function App() {
 
   return (
@@ -12,8 +11,8 @@ function App() {
           <Apbar />
         </div>
         <div className='col-10 px-4'>
-          <Navbar />
-          <Student_his/>
+        <Navbar/>
+        <Schart/>
         </div>
       </div>
     </div>

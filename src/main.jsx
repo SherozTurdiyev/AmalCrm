@@ -14,6 +14,8 @@ import Guruhlar from './pages/Guruhlar/index'
 import Ota_Onalar from './pages/Ota_Onalar/index'
 import Habarlar from './pages/Habarlar/index'
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
+import ApexCharts from 'apexcharts';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

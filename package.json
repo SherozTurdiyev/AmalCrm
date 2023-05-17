@@ -16,6 +16,7 @@
     "@remix-run/router": "^1.6.1",
     "antd": "^5.4.2",
     "apexcharts": "^3.40.0",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "date-fns": "^2.30.0",
     "html2canvas": "^1.4.1",

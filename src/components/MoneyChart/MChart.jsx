@@ -19,16 +19,33 @@ const data = [
 function MChart() {
   return (
     <div>
-      <h3>O’quv markazi  statistikasi</h3>
-      <LineChart width={800} height={300} data={data}>
-      <XAxis dataKey="name" />
-      <YAxis />
-      <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-      <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="Joriy_hafta" stroke="#FB7D5B" />
-      <Line type="monotone" dataKey="otkan_hafta" stroke="#FCC43E" />
-    </LineChart>
+      <div className='poppins flex items-center justify-between mb-3'>
+        <p className='poppins font-bold text-2xl text-mainColor mb-4'>O’quv markazi  statistikasi</p>
+        <div className='flex'>
+          <div className='mr-5'>
+            <p className='flex items-center text-secondary font-normal text-sm m-0 pb-1'>
+              <div className='w-3 h-3 rounded-full border-4 border-lightGold mr-2'></div>
+              Joriy hafta</p>
+            <p className='font-bold text-lg text-mainColor m-0 pl-[21px]'>1.245</p>
+          </div>
+          <div >
+            <p className='flex items-center text-secondary font-normal text-sm m-0 pb-1'>
+              <div className='w-3 h-3 rounded-full border-4 border-orange mr-2'></div>
+              o’tkan hafta</p>
+            <p className='font-bold text-lg text-mainColor m-0 pl-[22px]'>1.356</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <LineChart width={900} height={300} data={data}>
+          <XAxis dataKey="name" />
+          <YAxis />
+          <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+          <Tooltip />
+          <Line type="monotone" dataKey="Joriy_hafta" stroke="#FB7D5B" />
+          <Line type="monotone" dataKey="otkan_hafta" stroke="#FCC43E" />
+        </LineChart>
+      </div>
     </div>
   );
 }

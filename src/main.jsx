@@ -16,24 +16,29 @@ import Habarlar from './pages/Habarlar/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import ApexCharts from 'apexcharts';
+import { QueryClientProvider, QueryClient } from 'react-query'
+
+const clientQuery = new QueryClient()
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Login />} />
-        <Route path='/' element={<App />}>
-          <Route path='/Statistika' element={<Statistika />} />
-          <Route path='/Oquvchilar' element={<Oquvchilar />} />
-          <Route path='/Oqituvchilar' element={<Oqituvchilar />} />
-          <Route path='/Bildirishnoma' element={<Bildirishnoma />} />
-          <Route path='/Moliya' element={<Moliya />} />
-          <Route path='/Guruhlar' element={<Guruhlar />} />
-          <Route path='/Ota_Onalar' element={<Ota_Onalar />} />
-          <Route path='/Habarlar' element={<Habarlar />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={clientQuery}>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Login />} />
+          <Route path='/' element={<App />}>
+            <Route path='/Statistika' element={<Statistika />} />
+            <Route path='/Oquvchilar' element={<Oquvchilar />} />
+            <Route path='/Oqituvchilar' element={<Oqituvchilar />} />
+            <Route path='/Bildirishnoma' element={<Bildirishnoma />} />
+            <Route path='/Moliya' element={<Moliya />} />
+            <Route path='/Guruhlar' element={<Guruhlar />} />
+            <Route path='/Ota_Onalar' element={<Ota_Onalar />} />
+            <Route path='/Habarlar' element={<Habarlar />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   </React.StrictMode>
 )

@@ -2,11 +2,23 @@ import React from 'react';
 import LoginImg from '../../assets/svg/login.svg'
 import Logo from '../../assets/images/crm.png'
 import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+import axios from 'axios'
+import { requestApi } from '../../services/api';
+import { useMutationApi } from '../../hooks/useApiMutation';
 
 const Login = () => {
     const navigate = useNavigate()
+    const phoneNumber = useRef('')
+    const password = useRef("")
+    const { mutate, isLoading, isError, error } = useMutationApi('/user/login/', "post")
 
     function handlerLogin() {
+        mutate({
+            "phone": "+998938626563",
+            "password": "1"
+        })
+        // console.log(phoneNumber.current.value, password.current.value);
         navigate('/Statistika')
     }
 
@@ -16,8 +28,11 @@ const Login = () => {
                 <img className='mx-auto w-[125px] mb-6' src={Logo} alt="" />
                 <p className='text-center'>Log in</p>
                 <div className='w-[348px] mx-auto DM-Sans mb-5'>
-                    <p className='mb-[9px] font-medium text-base DM-Sans text-logintext'>Phone number</p>
+                    <p className='mb-[9px] font-medium text-base DM-Sans text-logintext'>
+                        Phone number
+                    </p>
                     <input
+                        ref={phoneNumber}
                         type="number"
                         className='bg-light rounded-xl w-[348px] h-[50px] outline-none p-4 font-medium text-base text-dark'
                         placeholder='+998912345678'
@@ -26,6 +41,7 @@ const Login = () => {
                 <div className='w-[348px] mx-auto DM-Sans mb-[30px]'>
                     <p className='mb-[9px] font-medium text-base DM-Sans text-logintext'>Password</p>
                     <input
+                        ref={password}
                         type="password"
                         className='bg-light rounded-xl w-[348px] h-[50px] outline-none p-4 font-medium text-base text-dark mb-[38px]'
                         placeholder='********'

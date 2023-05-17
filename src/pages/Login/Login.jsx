@@ -14,12 +14,20 @@ const Login = () => {
     const { mutate, isLoading, isError, error } = useMutationApi('/user/login/', "post")
 
     function handlerLogin() {
-        mutate({
-            "phone": "+998938626563",
-            "password": "1"
-        })
+        // mutate()
+        axios.post("http://shamuratov.pythonanywhere.com/api/v1/user/login/",
+            {
+                data: {
+                    "phone": "+998938626563",
+                    "password": "1"
+                }
+            }
+        )
+            .then((res) => {
+                console.log(res);
+            })
         // console.log(phoneNumber.current.value, password.current.value);
-        navigate('/Statistika')
+        // navigate('/Statistika')
     }
 
     return (

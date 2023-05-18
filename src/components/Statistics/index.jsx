@@ -13,7 +13,7 @@ const stats = [
 
 export default function Example() {
   return (
-    <div className="bg-white">
+    <div className="bg-white rounded-2xl">
       <div className="mx-auto shadow-lg rounded-2xl py-10 mx-10">
         <dl className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
           {stats.map((stat) => (

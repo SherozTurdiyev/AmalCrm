@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './apbar.css'
 import {
   HomeOutlined,
@@ -14,26 +14,36 @@ import { FaHandHoldingUsd } from 'react-icons/fa'
 import { TbHexagonLetterA } from 'react-icons/tb'
 
 import { Menu } from 'antd';
+import { useNavigate } from 'react-router-dom';
+
 
 function App() {
+  const navigate = useNavigate()
+  const menuList = [
+    // {label : `${collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}`},
+    { label: "CRM", key: '/', icon: <TbHexagonLetterA style={{ fontSize: "30px", background: '#FB7D5B', padding: '3px', boxSizing: 'border-box' }} className='rounded-lg' /> },
+    { label: "Statistika", key: "Statistika", icon: <HomeOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "O'quvchilar", key: "o'quvchilar", icon: <ImUserTie style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "O'qituvchilar", key: "o'qituvchlar", icon: <RiUser2Fill style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Bildirishnoma", key: "bildirishnoma", icon: <BsCalendarDate style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Moliya", key: "moliya", icon: <FaHandHoldingUsd style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Guruhlar", key: "guruh", icon: <BiCubeAlt style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Ota-onalar uchun", key: "parents", icon: <UserOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Xabarlar", key: "xabar", icon: <MessageOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
+  ]
+
+  function handler(v){
+    navigate(`/${v.key}`)
+  }
+
   return (
     <div style={{ width: 229, }}>
       <Menu
         mode="inline"
         theme='dark'
-        style={{ background: "#4D44B5", fontWeight: '500', height: '100vh', fontSize: '17px'}}
-        items={[
-          // {label : `${collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}`},
-          { label: "CRM", key: 'crm', icon: <TbHexagonLetterA style={{ fontSize: "30px", background: '#FB7D5B', padding: '3px', boxSizing: 'border-box' }} className='rounded-lg' /> },
-          { label: "Statistika", key: "statistika", icon: <HomeOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
-          { label: "O'quvchilar", key: "o'quvchilar", icon: <ImUserTie style={{ fontSize: "25px", marginRight: '5px' }} /> },
-          { label: "O'qituvchilar", key: "o'qituvchlar", icon: <RiUser2Fill style={{ fontSize: "25px", marginRight: '5px' }} /> },
-          { label: "Bildirishnoma", key: "bildirishnoma", icon: <BsCalendarDate style={{ fontSize: "25px", marginRight: '5px' }} /> },
-          { label: "Moliya", key: "moliya", icon: <FaHandHoldingUsd style={{ fontSize: "25px", marginRight: '5px' }} /> },
-          { label: "Guruhlar", key: "guruh", icon: <BiCubeAlt style={{ fontSize: "25px", marginRight: '5px' }} /> },
-          { label: "Ota-onalar uchun", key: "parents", icon: <UserOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
-          { label: "Xabarlar", key: "xabar", icon: <MessageOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
-        ]}
+        style={{ background: "#4D44B5", fontWeight: '500', height: '100vh', fontSize: '17px' }}
+        items={menuList}
+        onClick={handler}
       />
     </div>
   );

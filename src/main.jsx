@@ -17,7 +17,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import ApexCharts from 'apexcharts';
 import { QueryClientProvider, QueryClient } from 'react-query'
-
+import {ReactQueryDevtools} from 'react-query/devtools'
 const clientQuery = new QueryClient()
 
 
@@ -39,6 +39,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </Route>
         </Routes>
       </BrowserRouter>
+      <ReactQueryDevtools />
     </QueryClientProvider>
   </React.StrictMode>
 )

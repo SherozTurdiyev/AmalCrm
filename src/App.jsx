@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Apbar from './components/Apbar/index.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
+import PageLoader from './components/shared/PageLoader/PageLoader.jsx'
+
+
+
 function App() {
 
   return (

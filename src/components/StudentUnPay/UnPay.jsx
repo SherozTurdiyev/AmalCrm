@@ -6,7 +6,6 @@ import { BsThreeDots } from 'react-icons/bs'
 import { ImUnlocked, ImLock } from 'react-icons/im'
 import { FcCancel } from 'react-icons/fc'
 import { HiPencilAlt } from 'react-icons/hi'
-import { useApi } from '../../hooks/useApi'
 const Index = () => {
   const mass = [
     { son: 1 },
@@ -14,9 +13,6 @@ const Index = () => {
     { son: 3 },
     { son: 4 },
   ]
-
-  const { data, isLoading, isError } = useApi('/manager/unpaid-students-list')
-  console.log(data);
 
   return (
     <div className='container mx-auto'>

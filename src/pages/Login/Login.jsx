@@ -11,23 +11,20 @@ const Login = () => {
     const navigate = useNavigate()
     const phoneNumber = useRef('')
     const password = useRef("")
-    const { mutate, isLoading, isError, error } = useMutationApi('/user/login/', "post")
+    // const { mutate, isLoading, isError, error } = useMutationApi('/user/login/', "post")
+
 
     function handlerLogin() {
-        // mutate()
-        axios.post("http://shamuratov.pythonanywhere.com/api/v1/user/login/",
-            {
-                data: {
-                    "phone": "+998938626563",
-                    "password": "1"
-                }
-            }
-        )
+        let infoData = {
+            "phone": "+998938626563",
+            "password": "1"
+        }
+        axios.post("http://shamuratov.pythonanywhere.com/api/v1/user/login/", { ...infoData })
             .then((res) => {
-                console.log(res);
+                localStorage.setItem("access" , res.data?.user?.access)
+                localStorage.setItem("refresh" , res.data?.user?.refresh)
+                if(res.data.success){navigate('/Statistika')}
             })
-        // console.log(phoneNumber.current.value, password.current.value);
-        // navigate('/Statistika')
     }
 
     return (

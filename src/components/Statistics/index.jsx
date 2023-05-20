@@ -25,7 +25,7 @@ export default function Example() {
   return (
     <div className="bg-white rounded-2xl">
       <div className="mx-auto shadow-lg rounded-2xl py-10">
-        <dl className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+        <dl className="grid grid-cols-2 md:grid-cols-3 gap-y-16 text-center lg:grid-cols-4">
           {countStatistics.map((stat) => (
             <div key={stat.id} className="mx-auto flex gap-y-3 items-center">
               <div className='text-3xl p-3 text-white rounded-full mx-4' style={{ backgroundColor: `${stat.color}` }}>{stat.img}</div>
@@ -34,7 +34,7 @@ export default function Example() {
                 <div className="order-first">
                   {
                     !!stat.value ||  stat.value == 0 ?
-                      <p className='text-5xl font-bold tracking-tight text-gray-800 text-start'>{stat.value} ta</p>
+                      <p className='text-4xl font-bold tracking-tight text-gray-800 text-start'>{stat.value} ta</p>
                       :
                       <Skeleton.Button active={true} size={'large'}  block={"block"} style />
                   }

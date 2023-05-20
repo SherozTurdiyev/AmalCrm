@@ -5,12 +5,10 @@ import './assets/css/index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './pages/Login/Login'
 import ApexCharts from 'apexcharts';
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import PageLoader from './components/shared/PageLoader/PageLoader'
-
 const Login = lazy(() => import('./pages/Login/Login'))
 const Statistika = lazy(() => import("./pages/Statistika/index"))
 const Oquvchilar = lazy(() => import('./pages/Oquvchilar'))

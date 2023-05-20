@@ -15,7 +15,6 @@ import Ota_Onalar from './pages/Ota_Onalar/index'
 import Habarlar from './pages/Habarlar/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login/Login'
-import ApexCharts from 'apexcharts';
 import { QueryClientProvider, QueryClient } from 'react-query'
 
 const clientQuery = new QueryClient()

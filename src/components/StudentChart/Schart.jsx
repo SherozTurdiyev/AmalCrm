@@ -4,6 +4,8 @@ import { Button } from 'antd';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
+
+
 class Schart extends Component {
   constructor(props) {
     super(props);

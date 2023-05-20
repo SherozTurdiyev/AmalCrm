@@ -12,7 +12,7 @@ function App() {
         </div>
         <div className='col-10 px-4'>
         <Navbar/>
-        <Add_student/>
+        {/* <Add_student/> */}
         </div>
       </div>
     </div>

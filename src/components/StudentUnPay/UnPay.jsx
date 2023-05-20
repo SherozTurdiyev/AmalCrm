@@ -3,9 +3,9 @@ import './UnPay.css'
 import { FaRegUser } from 'react-icons/fa'
 import { AiOutlinePrinter } from 'react-icons/ai'
 import { BsThreeDots } from 'react-icons/bs'
-import {ImUnlocked ,ImLock} from 'react-icons/im'
-import {FcCancel} from 'react-icons/fc'
-import {HiPencilAlt} from 'react-icons/hi'
+import { ImUnlocked, ImLock } from 'react-icons/im'
+import { FcCancel } from 'react-icons/fc'
+import { HiPencilAlt } from 'react-icons/hi'
 const Index = () => {
   const mass = [
     { son: 1 },
@@ -19,7 +19,7 @@ const Index = () => {
       <h3 className='mb-3'>To'lan magan talaba </h3>
       <table className='table table-borderless'>
         <thead>
-          <tr>
+          <tr className=''>
             <th>N#</th>
             <th>FISH</th>
             <th>ID</th>
@@ -49,17 +49,15 @@ const Index = () => {
                       <AiOutlinePrinter className='text-slate-300 fs-1 ' />
 
                       <div className="dropdown">
-                        <a className="dropdown-toggle" href="#"  data-bs-toggle="dropdown" >
+                        <a className="dropdown-toggle" href="#" data-bs-toggle="dropdown" >
                           <BsThreeDots classNameName='fs-4' />
                         </a>
 
                         <ul className="dropdown-menu">
-                          <li className="dropdown-item d-flex justify-content-center align-items-center text-danger"><ImLock/> <p className='p'>Bloklash</p></li>
-                          <li className="dropdown-item d-flex justify-content-center align-items-center  text-success"><ImUnlocked/> <p className='p'>Blokdan chiqarish</p></li> 
-                          <li className="dropdown-item d-flex justify-content-center align-items-center  text-danger"><FcCancel/> <p className='p'>Kursni tugatish</p></li>
-                          <li className="dropdown-item d-flex justify-content-center align-items-center  text-primary"><HiPencilAlt/> <p className='p'>Taxrirlash</p></li>
-                          
-
+                          <li className="dropdown-item d-flex justify-content-center align-items-center text-danger"><ImLock /> <p className='p'>Bloklash</p></li>
+                          <li className="dropdown-item d-flex justify-content-center align-items-center  text-success"><ImUnlocked /> <p className='p'>Blokdan chiqarish</p></li>
+                          <li className="dropdown-item d-flex justify-content-center align-items-center  text-danger"><FcCancel /> <p className='p'>Kursni tugatish</p></li>
+                          <li className="dropdown-item d-flex justify-content-center align-items-center  text-primary"><HiPencilAlt /> <p className='p'>Taxrirlash</p></li>
                         </ul>
                       </div>
                     </div>

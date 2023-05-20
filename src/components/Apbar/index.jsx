@@ -23,13 +23,13 @@ function App() {
     // {label : `${collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}`},
     { label: "CRM", key: '/', icon: <TbHexagonLetterA style={{ fontSize: "30px", background: '#FB7D5B', padding: '3px', boxSizing: 'border-box' }} className='rounded-lg' /> },
     { label: "Statistika", key: "Statistika", icon: <HomeOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "O'quvchilar", key: "o'quvchilar", icon: <ImUserTie style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "O'qituvchilar", key: "o'qituvchlar", icon: <RiUser2Fill style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "Bildirishnoma", key: "bildirishnoma", icon: <BsCalendarDate style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "Moliya", key: "moliya", icon: <FaHandHoldingUsd style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "Guruhlar", key: "guruh", icon: <BiCubeAlt style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "Ota-onalar uchun", key: "parents", icon: <UserOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "Xabarlar", key: "xabar", icon: <MessageOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "O'quvchilar", key: "Oquvchilar", icon: <ImUserTie style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "O'qituvchilar", key: "Oqituvchilar", icon: <RiUser2Fill style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Bildirishnoma", key: "Bildirishnoma", icon: <BsCalendarDate style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Moliya", key: "Moliya", icon: <FaHandHoldingUsd style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Guruhlar", key: "Guruhlar", icon: <BiCubeAlt style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Ota-onalar uchun", key: "Ota_Onalar", icon: <UserOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Xabarlar", key: "Habarlar", icon: <MessageOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
   ]
 
   function handler(v){

@@ -9,7 +9,6 @@ import ApexCharts from 'apexcharts';
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import PageLoader from './components/shared/PageLoader/PageLoader'
-
 const Login = lazy(() => import('./pages/Login/Login'))
 const Statistika = lazy(() => import("./pages/Statistika/index"))
 const Oquvchilar = lazy(() => import('./pages/Oquvchilar'))

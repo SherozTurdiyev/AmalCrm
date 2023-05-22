@@ -47,7 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Suspense>
 
       </BrowserRouter>
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
   </React.StrictMode>
 )

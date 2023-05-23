@@ -20,6 +20,8 @@ const Ota_Onalar = lazy(() => import('./pages/Ota_Onalar'))
 const Habarlar = lazy(() => import('./pages/Habarlar'))
 const StudentInfo = lazy(()=>import('./pages/SingleStudent'))
 const SingleTeacher = lazy(()=>import('./pages/Oqituvchilar/SingleTeacher'))
+
+
 const clientQuery = new QueryClient()
 
 

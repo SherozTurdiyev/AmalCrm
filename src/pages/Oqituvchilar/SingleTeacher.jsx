@@ -16,18 +16,23 @@ const SingleTeacher = () => {
     return (
         <div>
             <About_Student info={infoQ} role="Frontend o’qituvchi(Master)" />
-            <div className='mt-5 w-full bg-white py-6 px-10 rounded-3xl' >
-                {
-                    groups.isLoading ?
-                        <PageLoader />
-                        :
-                        <div className='grid grid-cols-3 gap-5'>
-                            {
-                                groupsList.map((item, index) => (<div className='col-span-1'><Teacher_Lesson item={item} /></div>))
-                            }
-                        </div>
-                }
-            </div>
+            {
+                groupsList.length > 0 &&
+                <>
+                    <div className='mt-5 w-full bg-white py-6 px-10 rounded-3xl' >
+                        {
+                            groups.isLoading ?
+                                <PageLoader />
+                                :
+                                <div className='grid grid-cols-3 gap-5'>
+                                    {
+                                        groupsList.map((item, index) => (<div className='col-span-1'><Teacher_Lesson item={item} /></div>))
+                                    }
+                                </div>
+                        }
+                    </div>
+                </>
+            }
         </div>
     );
 }

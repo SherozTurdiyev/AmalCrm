@@ -3,7 +3,7 @@ import './Teacher_lesson.css'
 import Img from '../../assets/img_for_student.png'
 
 export default function Teacher_Lesson(props) {
-  console.log(props.item);
+  
   return (
     <div className=' text-white'>
         <div style={{background: props?.bg || '#4D44B5'}} className='Lesson_table_card'>

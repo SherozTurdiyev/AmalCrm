@@ -10,7 +10,7 @@ import { Skeleton } from 'antd'
 export default function About_Student({ info, role }) {
 
   return (
-    <div>
+    <div >
       <div className='student_bg mt-5'>
         <div className="circle2"></div>
         <div className="circle1"></div>
@@ -23,7 +23,6 @@ export default function About_Student({ info, role }) {
                 <Skeleton.Image active={true} style={{ width: "160px", height: "160px", borderRadius: "50%" }} />
                 :
                 <img src={info.avatar} alt="" />
-
             }
           </div>
           <div className='student_name_card'>

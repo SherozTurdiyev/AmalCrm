@@ -20,7 +20,6 @@ export default function Example() {
   const countStatistics = stats.map((item) => {
     return { ...item, value: data?.data[item.index] }
   })
-  console.log(countStatistics);
 
   return (
     <div className="bg-white rounded-2xl">

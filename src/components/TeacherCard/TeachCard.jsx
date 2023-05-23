@@ -5,11 +5,9 @@ import { BsThreeDots } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 
 const TeachCard = ({ info }) => {
-  console.log(info);
-
 
   return (
-    <div className='bg-slate-200 w-72 px-6 py-6 rounded-lg text-center relative hover:shadow-md'>
+    <div className='bg-slate-200 w-full px-6 py-6 rounded-lg text-center relative hover:shadow-md'>
       {
         info.avatar ?
           <img className='rounded-full w-[144px] m-auto mb-5' src={info.avatar} alt="user" />

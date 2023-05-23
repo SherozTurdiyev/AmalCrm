@@ -1,5 +1,5 @@
 .Lesson_table {
-  width: 1007px;
+  width: 100%;
   height: auto;
   border-radius: 20px;
   background-color: white;
@@ -9,7 +9,7 @@
 }
 
 .Lesson_table_card {
-  width: 287px;
+  width: 100%;
   height: auto;
   padding: 1rem;
   border-radius: 25px;

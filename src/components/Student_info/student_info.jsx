@@ -2,78 +2,54 @@ import { Button, Table } from 'antd';
 import { useState } from 'react';
 const columns = [
   {
+    title: 'N#',
+    dataIndex: "index",
+    width: "60px"
+  },
+  {
     title: 'FISH',
-    dataIndex: 'FISH',
+    dataIndex: 'last_name',
+    width: "200px"
   },
   {
     title: 'ID',
-    dataIndex: 'ID',
+    dataIndex: 'id',
   },
   {
     title: 'Sana',
-    dataIndex: 'Sana',
+    dataIndex: 'birth_date',
   },
   {
     title: 'Contact',
-    dataIndex: 'Contact',
+    dataIndex: 'phone',
   },
   {
     title: 'Guruh',
-    dataIndex: 'Guruh',
-  }, 
+    dataIndex: 'groups',
+  },
   {
-    title: 'Hodisa',
+    title: '',
     dataIndex: 'Hodisa',
+    width: "60px"
   },
 ];
-const data = [];
-for (let i = 0; i < 12; i++) {
-  data.push({
-    key: i,
-    name: `Edward King ${i}`,
-    age: 32,
-    address: `London, Park Lane no. ${i}`,
-  });
-}
-const App = () => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const start = () => {
-    setLoading(true);
-    // ajax request after empty completing
-    setTimeout(() => {
-      setSelectedRowKeys([]);
-      setLoading(false);
-    }, 1000);
-  };
-  const onSelectChange = (newSelectedRowKeys) => {
-    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
-    setSelectedRowKeys(newSelectedRowKeys);
-  };
-  const rowSelection = {
-    selectedRowKeys,
-    onChange: onSelectChange,
-  };
-  const hasSelected = selectedRowKeys.length > 0;
+
+const App = ({ dataSource, isLoading }) => {
+
+  let data = dataSource.map((item, index) => {
+    return {
+      index: index+1 , 
+      last_name: item.last_name,
+      id: item.id,
+      birth_date: item.user.birth_date,
+      phone: item.user.phone, 
+      groups: item.user.groups
+    }
+  })
+
   return (
     <div>
-      <div
-        style={{
-          marginBottom: 16,
-        }}
-      >
-        <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
-          Reload
-        </Button>
-        <span
-          style={{
-            marginLeft: 8,
-          }}
-        >
-          {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
-        </span>
-      </div>
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+      <Table columns={columns} dataSource={data} loading={isLoading} />
     </div>
   );
 };

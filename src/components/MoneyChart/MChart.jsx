@@ -37,7 +37,7 @@ function MChart() {
         </div>
       </div>
       <div>
-        <LineChart width={700} height={300} data={data}>
+        <LineChart width={900} height={300} data={data}>
           <XAxis dataKey="name" />
           <YAxis />
           <CartesianGrid stroke="#eee" strokeDasharray="5 5" />

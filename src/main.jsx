@@ -20,6 +20,7 @@ const Ota_Onalar = lazy(() => import('./pages/Ota_Onalar'))
 const Habarlar = lazy(() => import('./pages/Habarlar'))
 const StudentInfo = lazy(()=>import('./pages/SingleStudent'))
 const SingleTeacher = lazy(()=>import('./pages/Oqituvchilar/SingleTeacher'))
+const AddTeach = lazy(()=> import ('./pages/Oqituvchilar/Add_teacher/Add_teach'))
 const clientQuery = new QueryClient()
 
 
@@ -41,6 +42,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/Habarlar' element={<Habarlar />} />
               <Route path='/student/:id' element={<StudentInfo />} />
               <Route path="/teacher/:id" element={<SingleTeacher />} />
+              <Route path="/addteach" element={<AddTeach />} />
             </Route>
           </Routes>
         </Suspense>

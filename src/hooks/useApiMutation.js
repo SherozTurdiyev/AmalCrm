@@ -8,7 +8,7 @@ export const useMutationApi = (url, method) => {
                 return requestApi({
                     method,
                     url,
-                    data: variable
+                    data: variable,
                 })
             })
     )

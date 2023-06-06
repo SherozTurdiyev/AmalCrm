@@ -7,8 +7,7 @@ import { useNavigate } from "react-router";
 export const requestApi = axios.create({
     baseURL: "http://shamuratov.pythonanywhere.com/api/v1",
     headers: {
-        Authorization: `Bearer ${localStorage.getItem("access")}`
-    }
+        Authorization: `Bearer ${localStorage.getItem("access")}`    }
 })
 
 requestApi.interceptors.response.use(

@@ -29,7 +29,7 @@ export default function index() {
         <div>
           <div className='w-full bg-white py-4 px-4 mb-4 rounded-2xl '>
             <p className='font-bold text-[#303972] text-2xl'>Dars jadvali</p>
-            <p className='font-medium text-[14px] text-[#A098AE]'>{weekend[today.getDay() - 1].day}, {today.getDate()} -  {MONTHS[today.getMonth()-1].month} , {today.getFullYear()}-yil</p>
+            <p className='font-medium text-[14px] text-[#A098AE]'>{weekend[today.getDay() - 1].day}, {today.getDate()} -  {MONTHS[today.getMonth() - 1].month} , {today.getFullYear()}-yil</p>
           </div>
           <LessonCard color="red" group="FrontEnd 001" teacher="Turdiev Sheroz" date="mart 20, 2023" time="18:00" />
           <View_btn />

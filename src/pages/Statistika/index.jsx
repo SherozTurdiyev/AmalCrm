@@ -8,11 +8,10 @@ import View_btn from '../../components/View_btn/View_btn'
 import { MONTHS, weekend } from '../../services/constants'
 
 export default function index() {
-  const { data, isLoading } = useApi("unPayStudent", '/manager/unpaid-students-list')
-
+  const { data: unPayStudentList , isLoading } = useApi("unPayStudent", '/manager/unpaid-students-list')
+  const studentList = unPayStudentList?.data.results || []
   const today = new Date()
 
-  console.log(today.getMonth());
 
   return (
     <div className='mt-8 grid grid-cols-10 gap-x-3'>
@@ -22,7 +21,7 @@ export default function index() {
           <MChart />
         </div>
         <div className='bg-white mt-8 p-8 pb-0 rounded-2xl'>
-          <StudentUnPay />
+          <StudentUnPay unPayStudentList={studentList} />
         </div>
       </div>
       <div className='col-span-3'>

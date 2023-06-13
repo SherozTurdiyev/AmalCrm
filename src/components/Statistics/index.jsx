@@ -14,7 +14,7 @@ const stats = [
 ]
 
 export default function Example() {
-  const { data } = useApi("", "/teacher/get-counts-statistics")
+  const { data } = useApi("stats", "/teacher/get-counts-statistics")
 
 
   const countStatistics = stats.map((item) => {

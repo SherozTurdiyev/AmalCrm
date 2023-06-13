@@ -45,7 +45,6 @@ const AddTeach = () => {
         phone: '+998001234561',
         avatar: '',
         branch: ''
-
       }
     )
   }

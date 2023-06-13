@@ -8,9 +8,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 400px;
   font-size: 20px;
   color: #4D44B5;
+  gap: 15px;
 }
 
 
@@ -21,9 +21,7 @@ select {
 .img_rounded {
   width: 70px;
   height: 70px;
-  background-color: rgb(192, 158, 224);
   cursor: pointer;
-  border-radius: 50%;
 }
 
 .not_icon {
@@ -34,11 +32,4 @@ select {
   cursor: pointer;
   display: grid;
   place-items: center;
-}
-
-.user_info_nav {
-  width: 40%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }

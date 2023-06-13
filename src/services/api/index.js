@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Modal } from 'antd'
+import { Content } from "antd/es/layout/layout";
 
 
 
@@ -7,7 +9,8 @@ import { useNavigate } from "react-router";
 export const requestApi = axios.create({
     baseURL: "http://shamuratov.pythonanywhere.com/api/v1",
     headers: {
-        Authorization: `Bearer ${localStorage.getItem("access")}`    }
+        Authorization: `Bearer ${localStorage.getItem("access")}`
+    }
 })
 
 requestApi.interceptors.response.use(
@@ -20,10 +23,14 @@ requestApi.interceptors.response.use(
                 console.log("UnAuthorization");
                 localStorage.removeItem('access')
                 break;
-            case 403 :
-                 console.log( window.location.pathname = "/");
-            default:
+            case 403:
+                // console.log(window.location.pathname = "/");
                 break;
+            case 400:
+              console.log("status: 400");
+                break;
+            default: break;
         }
+        return error;
     }
 )

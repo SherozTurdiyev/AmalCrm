@@ -18,9 +18,10 @@ const Moliya = lazy(() => import('./pages/Moliya'))
 const Guruhlar = lazy(() => import('./pages/Guruhlar'))
 const Ota_Onalar = lazy(() => import('./pages/Ota_Onalar'))
 const Habarlar = lazy(() => import('./pages/Habarlar'))
-const StudentInfo = lazy(()=>import('./pages/SingleStudent'))
+const StudentInfo = lazy(()=>import('./pages/Oquvchilar/SingleStudent/index'))
 const SingleTeacher = lazy(()=>import('./pages/Oqituvchilar/SingleTeacher'))
 const AddTeach = lazy(()=> import ('./pages/Oqituvchilar/Add_teacher/Add_teach'))
+const AddStudent = lazy(()=> import ('./pages/Oquvchilar/Add_student/Add_student'))
 const clientQuery = new QueryClient()
 
 
@@ -43,12 +44,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/student/:id' element={<StudentInfo />} />
               <Route path="/teacher/:id" element={<SingleTeacher />} />
               <Route path="/addteach" element={<AddTeach />} />
+              <Route path="/addstudent" element={<AddStudent />} />
             </Route>
           </Routes>
         </Suspense>
 
       </BrowserRouter>
-      {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
   </React.StrictMode>
 )

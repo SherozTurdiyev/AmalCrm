@@ -1,5 +1,6 @@
 import { Button, Table } from 'antd';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 const columns = [
   {
     title: 'N#',
@@ -35,6 +36,7 @@ const columns = [
 ];
 
 const App = ({ dataSource, isLoading }) => {
+  const navigate = useNavigate()
 
   let data = dataSource.map((item, index) => {
     return {
@@ -47,9 +49,15 @@ const App = ({ dataSource, isLoading }) => {
     }
   })
 
+  const onRowHandle = (record , index)=>{
+    return{
+      onClick: ()=>{navigate(`/student/${record.id}`)}
+    }
+  }
+
   return (
     <div>
-      <Table columns={columns} dataSource={data} loading={isLoading} />
+      <Table  columns={columns} dataSource={data} loading={isLoading} onRow={onRowHandle} />
     </div>
   );
 };

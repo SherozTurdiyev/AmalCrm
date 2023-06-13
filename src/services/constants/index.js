@@ -43,3 +43,19 @@ export const MONTHS= [
 	{ id: 11, value: "11", month: "Noyabr" },
 	{ id: 12, value: "12", month: "Dekabr" },
 ];
+
+export const Direction = [
+    {id: 1 , value: "frontend" , label:"Frontend"},
+    {id: 2 , value: "backend" , label:"Backend"}
+]
+
+export const Groups = [
+    {id:1 , value:"Fr-001", label:"Frontend 001"},
+    {id:1 , value:"Back-001", label:"Backend 001"},
+]
+
+export const Year = [
+    {id:1 , value: 2021 , label:"2021-yil"},
+    {id:2 , value: 2022 , label:"2022-yil"},
+    {id:3 , value: 2023 , label:"2023-yil"}
+]

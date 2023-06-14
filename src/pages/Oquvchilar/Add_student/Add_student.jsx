@@ -1,12 +1,15 @@
 import { DatePicker, Input, Modal } from 'antd'
 import React, { useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import BackToBtn from '../../../components/shared/BackToBtn'
 import { useMutationApi } from '../../../hooks/useApiMutation'
 
 import './Add_student.css'
 
 export default function Add_student() {
-  const mutation = useMutationApi("/student/student-create/", "POST")
+  const mutation = useMutationApi("/student/student-create/", "POST");
+  const navigate = useNavigate();
+
   const first_name = useRef(null);
   const last_name = useRef(null)
   const email = useRef(null)
@@ -20,19 +23,18 @@ export default function Add_student() {
   const balance = useRef(null)
 
   const createStudent = () => {
-    console.log()
     mutation.mutate(
       {
         "first_name": first_name.current.input.value,
         "last_name": last_name.current.input.value,
         "email": email.current.input.value + "@gmail.com",
-        "phone":"+998" + phone.current.input.value,
+        "phone": "+998" + phone.current.input.value,
         "birth_date": birth_date,
         "address": address.current.input.value,
         "password": password.current.input.value,
         "password2": password2.current.input.value,
         "parent_name": parent_name.current.input.value,
-        "parent_phone":"+998" + parent_phone.current.input.value,
+        "parent_phone": "+998" + parent_phone.current.input.value,
         "balance": "0",
       }
     )
@@ -48,7 +50,7 @@ export default function Add_student() {
       title: "Xatolik Kuzatildi!",
       okButtonProps: {
         style: {
-          backgroundColor: "blue"
+          backgroundColor: "#6366F1"
         }
       },
       content: <div className='mt-3'>
@@ -60,6 +62,19 @@ export default function Add_student() {
           )
         })}
       </div>
+    })
+  }
+  console.log(mutation?.data?.status == 201);
+
+  if (mutation?.data?.status == 201) {
+    Modal.success({
+      okButtonProps:{
+        style:{
+          background:"#6366F1",
+        }
+      },
+      title: "Muvaffaqiyatli Saqlandi!",
+      onOk: ()=>{navigate("/Oquvchilar")}
     })
   }
 
@@ -83,7 +98,6 @@ export default function Add_student() {
           <div className='input_1 col-6'>
             <h5>Email </h5>
             <Input ref={email} addonAfter="@gmail.com" defaultValue="example" size='large' />
-            {/* <input ref={email} className='form-control' type="email" placeholder='Email' /> */}
           </div>
           <div className='input_1 col-6'>
             <h5>Tel raqami *</h5>

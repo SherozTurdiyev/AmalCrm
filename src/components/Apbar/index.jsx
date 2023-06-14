@@ -15,6 +15,7 @@ import { TbHexagonLetterA } from 'react-icons/tb'
 
 import { Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 
 function App() {
@@ -29,11 +30,11 @@ function App() {
     { label: "Moliya", key: "Moliya", icon: <FaHandHoldingUsd style={{ fontSize: "25px", marginRight: '5px' }} /> },
     { label: "Guruhlar", key: "Guruhlar", icon: <BiCubeAlt style={{ fontSize: "25px", marginRight: '5px' }} /> },
     { label: "Ota-onalar uchun", key: "Ota_Onalar", icon: <UserOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
-    { label: "Xabarlar", key: "Habarlar", icon: <MessageOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
+    { label: "Xabarlar", key: "Xabarlar", icon: <MessageOutlined style={{ fontSize: "25px", marginRight: '5px' }} /> },
   ]
 
   function handler(v){
-    navigate(`/${v.key}`)
+    navigate(`/${v.key}`);
   }
 
   return (

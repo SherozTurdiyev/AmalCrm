@@ -2,14 +2,17 @@ import { Input, Select, Space } from 'antd';
 import React, { useRef } from 'react';
 import QueryHook from '../../hooks/QueryHook/QueryHook';
 import { BiSearchAlt } from 'react-icons/bi'
-import { Direction, Groups, Year } from '../../services/constants';
+import { Direction, Groups, MONTHS, Year } from '../../services/constants';
 
 const Filter = (
     { actionBtn = null,
         nameFilter = false,
         directionFilter = false,
         groupFilter = false,
-        yearFilter = false
+        yearFilter = false,
+        monthFilter = false,
+        defaultYear = "Yil",
+        defaultMonth = "OY"
     }
 ) => {
     const { location, MergeQueryParams } = QueryHook()
@@ -61,13 +64,25 @@ const Filter = (
                 {
                     yearFilter &&
                     <Select
-                        defaultValue="Yil"
+                        defaultValue={defaultYear}
                         style={{ width: 180 }}
                         size='large'
                         options={Year}
                         onChange={(year) => {
                             MergeQueryParams({ year })
                         }}
+                    />
+                }
+                {
+                    monthFilter && 
+                    <Select 
+                       options={MONTHS}
+                       defaultValue={defaultMonth}
+                       style={{width: 180}}
+                       size="large"
+                       onChange={(month) => {
+                        MergeQueryParams({ month })
+                    }}
                     />
                 }
             </div>

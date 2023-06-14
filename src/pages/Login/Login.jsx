@@ -18,7 +18,7 @@ const Login = () => {
     function handlerLogin() {
         SetLoading(true)
         let infoData = {
-            "phone": "+998938626563",
+            "phone": "+998999999991",
             "password": "1"
         }
         axios.post("http://shamuratov.pythonanywhere.com/api/v1/user/login/", { ...infoData })

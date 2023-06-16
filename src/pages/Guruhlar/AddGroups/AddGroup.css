@@ -1,0 +1,24 @@
+.student_card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  color: #4D44B5;
+}
+
+.student_card_top {
+  width: 100%;
+  height: auto;
+  background-color: #4D44B5;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+
+.input_1 {
+  margin: 1rem 0;
+}
+
+.input_1 > h5 {
+  font-size: 19px !important;
+}

@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ApexCharts from 'apexcharts';
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 
 import PageLoader from './components/shared/PageLoader/PageLoader'
 const Login = lazy(() => import('./pages/Login/Login'))
@@ -24,6 +24,7 @@ const StudentInfo = lazy(() => import('./pages/Oquvchilar/SingleStudent/index'))
 const SingleTeacher = lazy(() => import('./pages/Oqituvchilar/SingleTeacher'))
 const AddTeach = lazy(() => import('./pages/Oqituvchilar/Add_teacher/Add_teach'))
 const AddStudent = lazy(() => import('./pages/Oquvchilar/Add_student/Add_student'))
+const AddGroups = lazy(()=>import('./pages/Guruhlar/AddGroups/AddGroups'))
 
 const clientQuery = new QueryClient()
 import { store } from './store/store'
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path='/Bildirishnoma' element={<Bildirishnoma />} />
                 <Route path='/Moliya' element={<Moliya />} />
                 <Route path='/Guruhlar' element={<Guruhlar />} />
+                <Route path='/addgroups' element={<AddGroups />} />
                 <Route path='/Ota_Onalar' element={<Ota_Onalar />} />
                 <Route path='/Xabarlar' element={<Habarlar />} />
                 <Route path='/student/:id' element={<StudentInfo />} />
